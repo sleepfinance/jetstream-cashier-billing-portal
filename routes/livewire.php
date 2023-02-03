@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use RenokiCo\BillingPortal\Http\Controllers\Livewire\BillingController;
-use RenokiCo\BillingPortal\Http\Controllers\Livewire\InvoiceController;
-use RenokiCo\BillingPortal\Http\Controllers\Livewire\PaymentMethodController;
-use RenokiCo\BillingPortal\Http\Controllers\Livewire\SubscriptionController;
+use Forgeify\BillingPortal\Http\Controllers\Livewire\BillingController;
+use Forgeify\BillingPortal\Http\Controllers\Livewire\InvoiceController;
+use Forgeify\BillingPortal\Http\Controllers\Livewire\PaymentMethodController;
+use Forgeify\BillingPortal\Http\Controllers\Livewire\SubscriptionController;
 
 Route::group([
     'prefix' => config('billing-portal.prefix'),

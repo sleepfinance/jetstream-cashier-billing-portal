@@ -1,12 +1,12 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Controllers\Livewire;
+namespace Forgeify\BillingPortal\Http\Controllers\Livewire;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\BillingPortal\Contracts\HandleSubscriptions;
-use RenokiCo\CashierRegister\Saas;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\Contracts\HandleSubscriptions;
+use Forgeify\CashierRegister\Saas;
 
 class SubscriptionController extends Controller
 {
@@ -36,7 +36,7 @@ class SubscriptionController extends Controller
     /**
      * Redirect the user to subscribe to the plan.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @param  string  $planId
      * @return \Illuminate\Http\Response

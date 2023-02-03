@@ -1,8 +1,8 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test;
+namespace Forgeify\BillingPortal\Test;
 
-use RenokiCo\BillingPortal\Test\Models\User;
+use Forgeify\BillingPortal\Test\Models\User;
 
 class InvoiceTest extends TestCase
 {

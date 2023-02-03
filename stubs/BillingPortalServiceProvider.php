@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use App\Actions\BillingPortal\HandleSubscriptions;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\BillingPortal\BillingPortalServiceProvider as BaseProvider;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortalServiceProvider as BaseProvider;
 
 class BillingPortalServiceProvider extends BaseProvider
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Livewire;
+namespace Forgeify\BillingPortal\Http\Livewire;
 
 use Illuminate\Http\Request;
 use Laravel\Jetstream\InteractsWithBanner;
 use Livewire\Component;
-use RenokiCo\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortal;
 
 class ListPaymentMethods extends Component
 {

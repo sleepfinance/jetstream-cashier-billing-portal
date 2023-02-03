@@ -1,9 +1,9 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test;
+namespace Forgeify\BillingPortal\Test;
 
-use RenokiCo\BillingPortal\Test\Models\User;
-use RenokiCo\CashierREgister\Saas;
+use Forgeify\BillingPortal\Test\Models\User;
+use Forgeify\CashierREgister\Saas;
 
 class WebhookTest extends TestCase
 {

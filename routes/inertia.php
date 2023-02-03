@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use RenokiCo\BillingPortal\Http\Controllers\Inertia\BillingController;
-use RenokiCo\BillingPortal\Http\Controllers\Inertia\InvoiceController;
-use RenokiCo\BillingPortal\Http\Controllers\Inertia\PaymentMethodController;
-use RenokiCo\BillingPortal\Http\Controllers\Inertia\SubscriptionController;
+use Forgeify\BillingPortal\Http\Controllers\Inertia\BillingController;
+use Forgeify\BillingPortal\Http\Controllers\Inertia\InvoiceController;
+use Forgeify\BillingPortal\Http\Controllers\Inertia\PaymentMethodController;
+use Forgeify\BillingPortal\Http\Controllers\Inertia\SubscriptionController;
 
 Route::group([
     'prefix' => config('billing-portal.prefix'),

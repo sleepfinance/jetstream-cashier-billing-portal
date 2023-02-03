@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal;
+namespace Forgeify\BillingPortal;
 
 class BillingPortal
 {

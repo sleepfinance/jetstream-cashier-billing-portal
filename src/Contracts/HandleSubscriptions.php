@@ -1,9 +1,9 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Contracts;
+namespace Forgeify\BillingPortal\Contracts;
 
 use Illuminate\Http\Request;
-use RenokiCo\CashierRegister\Plan;
+use Forgeify\CashierRegister\Plan;
 
 interface HandleSubscriptions
 {
@@ -11,7 +11,7 @@ interface HandleSubscriptions
      * Mutate the checkout object before redirecting the user to subscribe to a certain plan.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
@@ -21,7 +21,7 @@ interface HandleSubscriptions
      * Subscribe the user to a given plan.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
      * @return void
      */
@@ -30,18 +30,18 @@ interface HandleSubscriptions
     /**
      * Swap the current subscription plan.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
-     * @return \RenokiCo\CashierRegister\Models\Stripe\Subscription
+     * @return \Forgeify\CashierRegister\Models\Stripe\Subscription
      */
     public function swapToPlan($subscription, $billable, Plan $plan, Request $request);
 
     /**
      * Define the logic to be called when the user requests resuming a subscription.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -51,7 +51,7 @@ interface HandleSubscriptions
     /**
      * Define the subscriptioncancellation action.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
      * @param  \Illuminate\Http\Request  $request
      * @return void

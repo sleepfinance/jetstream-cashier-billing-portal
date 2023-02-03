@@ -17,7 +17,7 @@ return [
         'web',
         'auth:sanctum',
         'verified',
-        \RenokiCo\BillingPortal\Http\Middleware\Authorize::class,
+        \Forgeify\BillingPortal\Http\Middleware\Authorize::class,
     ],
 
     /*
@@ -51,7 +51,7 @@ return [
 
             'path' => '/stripe/webhook',
 
-            'class' => \RenokiCo\BillingPortal\Http\Controllers\StripeWebhook::class,
+            'class' => \Forgeify\BillingPortal\Http\Controllers\StripeWebhook::class,
 
         ],
 

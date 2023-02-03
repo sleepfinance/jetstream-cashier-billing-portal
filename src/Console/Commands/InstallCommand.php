@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Console\Commands;
+namespace Forgeify\BillingPortal\Console\Commands;
 
 use Illuminate\Filesystem\Filesystem;
 use Laravel\Jetstream\Console\InstallCommand as JetstreamInstallCommand;
@@ -41,7 +41,7 @@ class InstallCommand extends JetstreamInstallCommand
             $this->installLivewireStack();
         }
 
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\BillingPortal\BillingPortalServiceProvider', '--tag' => 'provider', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\BillingPortal\BillingPortalServiceProvider', '--tag' => 'provider', '--force' => true]);
 
         $this->installServiceProviderAfter('CashierRegisterServiceProvider', 'BillingPortalServiceProvider');
 
@@ -61,9 +61,9 @@ class InstallCommand extends JetstreamInstallCommand
             $this->requireComposerPackages('laravel/cashier:^13.4');
         }
 
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'config', '--force' => true]);
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'migrations', '--force' => true]);
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'provider', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'migrations', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\CashierRegister\CashierRegisterServiceProvider', '--tag' => 'provider', '--force' => true]);
 
         $this->installServiceProviderAfter('JetstreamServiceProvider', 'CashierRegisterServiceProvider');
     }
@@ -75,7 +75,7 @@ class InstallCommand extends JetstreamInstallCommand
      */
     protected function installInertiaStack()
     {
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\BillingPortal\BillingPortalServiceProvider', '--tag' => 'config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\BillingPortal\BillingPortalServiceProvider', '--tag' => 'config', '--force' => true]);
 
         (new Filesystem)->ensureDirectoryExists(resource_path('js/Pages/BillingPortal'));
         (new Filesystem)->ensureDirectoryExists(resource_path('js/BillingPortal'));
@@ -97,7 +97,7 @@ class InstallCommand extends JetstreamInstallCommand
      */
     protected function installLivewireStack()
     {
-        $this->callSilent('vendor:publish', ['--provider' => 'RenokiCo\BillingPortal\BillingPortalServiceProvider', '--tag' => 'config', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--provider' => 'Forgeify\BillingPortal\BillingPortalServiceProvider', '--tag' => 'config', '--force' => true]);
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/billing-portal'));
         (new Filesystem)->ensureDirectoryExists(resource_path('views/components'));

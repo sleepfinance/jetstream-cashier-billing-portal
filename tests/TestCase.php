@@ -1,13 +1,13 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test;
+namespace Forgeify\BillingPortal\Test;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Laravel\Cashier\Cashier as StripeCashier;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\CashierRegister\Saas;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\CashierRegister\Saas;
 use Stripe\ApiResource;
 use Stripe\Exception\InvalidRequestException;
 use Stripe\Plan;
@@ -133,8 +133,8 @@ abstract class TestCase extends Orchestra
     {
         return [
             \Laravel\Cashier\CashierServiceProvider::class,
-            \RenokiCo\CashierRegister\CashierRegisterServiceProvider::class,
-            \RenokiCo\BillingPortal\BillingPortalServiceProvider::class,
+            \Forgeify\CashierRegister\CashierRegisterServiceProvider::class,
+            \Forgeify\BillingPortal\BillingPortalServiceProvider::class,
             TestServiceProvider::class,
             \ClaudioDekker\Inertia\InertiaTestingServiceProvider::class,
         ];
@@ -156,7 +156,7 @@ abstract class TestCase extends Orchestra
 
         $app['config']->set('billing-portal.middleware', [
             'web',
-            \RenokiCo\BillingPortal\Http\Middleware\Authorize::class,
+            \Forgeify\BillingPortal\Http\Middleware\Authorize::class,
         ]);
 
         $app['config']->set('cashier.webhook.secret', null);
@@ -177,9 +177,9 @@ abstract class TestCase extends Orchestra
     /**
      * Create a new subscription.
      *
-     * @param  \RenokiCo\CashierRegister\Test\Models\Stripe\User  $user
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
-     * @return \RenokiCo\CashierRegister\Models\Stripe\Subscription
+     * @param  \Forgeify\CashierRegister\Test\Models\Stripe\User  $user
+     * @param  \Forgeify\CashierRegister\Plan  $plan
+     * @return \Forgeify\CashierRegister\Models\Stripe\Subscription
      */
     protected function createStripeSubscription($user, $plan)
     {

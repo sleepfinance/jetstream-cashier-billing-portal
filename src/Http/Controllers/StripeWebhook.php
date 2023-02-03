@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Controllers;
+namespace Forgeify\BillingPortal\Http\Controllers;
 
 use Laravel\Cashier\Http\Controllers\WebhookController;
 

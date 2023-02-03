@@ -1,36 +1,37 @@
 {
-    "name": "renoki-co/jetstream-cashier-billing-portal",
+    "name": "forgeify/jetstream-cashier-billing-portal",
     "description": "Cashierstream is a simple Spark alternative written for Laravel Jetstream.",
     "keywords": ["laravel", "php", "cashier", "billing", "portal", "jetstream", "stripe", "saas", "plans", "subscription"],
     "license": "Apache-2.0",
-    "homepage": "https://github.com/renoki-co/jetstream-cashier-billing-portal",
+    "homepage": "https://github.com/sleepfinance/jetstream-cashier-billing-portal",
     "authors": [
         {
             "name": "Alex Renoki",
-            "homepage": "https://github.com/rennokki",
+            "homepage": "https://github.com/sleepfinance",
             "role": "Developer"
         }
     ],
     "require": {
-        "laravel/jetstream": "^2.3",
-        "renoki-co/cashier-register": "^6.0"
+        "doctrine/dbal": "4.0.x-dev",
+        "forgeify/cashier-register": "dev-master",
+        "inertiajs/inertia-laravel": "dev-master",
+        "laravel/jetstream": "3.x-dev"
     },
     "require-dev": {
-        "claudiodekker/inertia-laravel-testing": "^1.2.0",
-        "doctrine/dbal": "^2.6|^3.0",
-        "laravel/legacy-factories": "^1.1",
-        "mockery/mockery": "^1.4",
-        "orchestra/database": "^6.0",
-        "orchestra/testbench": "^6.22"
+       
+        "laravel/legacy-factories": "1.x-dev",
+        "mockery/mockery": "^1.5",
+        "orchestra/database": "7.0.x-dev",
+        "orchestra/testbench": "7.x-dev"
     },
     "autoload": {
         "psr-4": {
-            "RenokiCo\\BillingPortal\\": "src/"
+            "Forgeify\\BillingPortal\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RenokiCo\\BillingPortal\\Test\\": "tests"
+            "Forgeify\\BillingPortal\\Test\\": "tests"
         }
     },
     "scripts": {
@@ -47,7 +48,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RenokiCo\\BillingPortal\\BillingPortalServiceProvider"
+                "Forgeify\\BillingPortal\\BillingPortalServiceProvider"
             ]
         }
     }

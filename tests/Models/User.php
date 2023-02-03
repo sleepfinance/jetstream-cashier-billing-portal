@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test\Models;
+namespace Forgeify\BillingPortal\Test\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;

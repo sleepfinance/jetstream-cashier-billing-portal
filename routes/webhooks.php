@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Cashier\Cashier as StripeCashier;
-use RenokiCo\BillingPortal\Http\Controllers\StripeWebhook;
+use Forgeify\BillingPortal\Http\Controllers\StripeWebhook;
 
 Route::group([
     'prefix' => config('billing-portal.prefix'),

@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Concerns;
+namespace Forgeify\BillingPortal\Concerns;
 
 use Closure;
 use Illuminate\Http\Request;

@@ -3,9 +3,9 @@
 namespace App\Actions\BillingPortal;
 
 use Illuminate\Http\Request;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\BillingPortal\Contracts\HandleSubscriptions as HandleSubscriptionsContract;
-use RenokiCo\CashierRegister\Plan;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\Contracts\HandleSubscriptions as HandleSubscriptionsContract;
+use Forgeify\CashierRegister\Plan;
 
 class HandleSubscriptions implements HandleSubscriptionsContract
 {
@@ -13,7 +13,7 @@ class HandleSubscriptions implements HandleSubscriptionsContract
      * Mutate the checkout object before redirecting the user to subscribe to a certain plan.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
@@ -29,9 +29,9 @@ class HandleSubscriptions implements HandleSubscriptionsContract
      * Subscribe the user to a given plan.
      *
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
-     * @return \RenokiCo\CashierRegister\Models\Stripe\Subscription
+     * @return \Forgeify\CashierRegister\Models\Stripe\Subscription
      */
     public function subscribeToPlan($billable, Plan $plan, Request $request)
     {
@@ -43,11 +43,11 @@ class HandleSubscriptions implements HandleSubscriptionsContract
     /**
      * Swap the current subscription plan.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
-     * @param  \RenokiCo\CashierRegister\Plan  $plan
+     * @param  \Forgeify\CashierRegister\Plan  $plan
      * @param  \Illuminate\Http\Request  $request
-     * @return \RenokiCo\CashierRegister\Models\Stripe\Subscription
+     * @return \Forgeify\CashierRegister\Models\Stripe\Subscription
      */
     public function swapToPlan($subscription, $billable, Plan $plan, Request $request)
     {
@@ -61,7 +61,7 @@ class HandleSubscriptions implements HandleSubscriptionsContract
     /**
      * Define the logic to be called when the user requests resuming a subscription.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
      * @param  \Illuminate\Http\Request  $request
      * @return void
@@ -74,7 +74,7 @@ class HandleSubscriptions implements HandleSubscriptionsContract
     /**
      * Define the subscriptioncancellation action.
      *
-     * @param  \RenokiCo\CashierRegister\Models\Stripe\Subscription  $subscription
+     * @param  \Forgeify\CashierRegister\Models\Stripe\Subscription  $subscription
      * @param  \Illuminate\Database\Eloquent\Model  $billable
      * @param  \Illuminate\Http\Request  $request
      * @return void

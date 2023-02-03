@@ -1,6 +1,6 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Controllers\Inertia;
+namespace Forgeify\BillingPortal\Http\Controllers\Inertia;
 
 use Closure;
 use Exception;
@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
-use RenokiCo\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortal;
 
 class PaymentMethodController extends Controller
 {

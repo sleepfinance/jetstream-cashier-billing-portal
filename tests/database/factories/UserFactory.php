@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$factory->define(\RenokiCo\BillingPortal\Test\Models\User::class, function () {
+$factory->define(\Forgeify\BillingPortal\Test\Models\User::class, function () {
     return [
         'name' => 'Name'.Str::random(5),
         'email' => Str::random(5).'@gmail.com',

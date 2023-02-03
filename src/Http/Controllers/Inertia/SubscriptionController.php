@@ -1,14 +1,14 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Controllers\Inertia;
+namespace Forgeify\BillingPortal\Http\Controllers\Inertia;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\BillingPortal\Contracts\HandleSubscriptions;
-use RenokiCo\CashierRegister\Saas;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\Contracts\HandleSubscriptions;
+use Forgeify\CashierRegister\Saas;
 
 class SubscriptionController extends Controller
 {
@@ -52,7 +52,7 @@ class SubscriptionController extends Controller
     /**
      * Redirect the user to subscribe to the plan.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @param  string  $planId
      * @return \Illuminate\Http\Response
@@ -78,7 +78,7 @@ class SubscriptionController extends Controller
     /**
      * Swap the plan to a new one.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @param  string  $newPlanId
      * @return \Illuminate\Http\Response
@@ -126,7 +126,7 @@ class SubscriptionController extends Controller
     /**
      * Resume the current cancelled subscription.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -149,7 +149,7 @@ class SubscriptionController extends Controller
     /**
      * Cancel the current active subscription.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */

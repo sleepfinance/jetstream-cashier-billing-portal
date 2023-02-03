@@ -1,9 +1,9 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test;
+namespace Forgeify\BillingPortal\Test;
 
-use RenokiCo\BillingPortal\Test\Models\User;
-use RenokiCo\CashierRegister\Saas;
+use Forgeify\BillingPortal\Test\Models\User;
+use Forgeify\CashierRegister\Saas;
 
 class SubscriptionTest extends TestCase
 {

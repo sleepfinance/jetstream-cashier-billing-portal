@@ -1,10 +1,10 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Test;
+namespace Forgeify\BillingPortal\Test;
 
 use Illuminate\Support\ServiceProvider;
 use Inertia\Inertia;
-use RenokiCo\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortal;
 
 class TestServiceProvider extends ServiceProvider
 {

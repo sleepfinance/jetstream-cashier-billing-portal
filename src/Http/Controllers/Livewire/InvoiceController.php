@@ -1,10 +1,10 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Controllers\Livewire;
+namespace Forgeify\BillingPortal\Http\Controllers\Livewire;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use RenokiCo\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortal;
 
 class InvoiceController extends Controller
 {

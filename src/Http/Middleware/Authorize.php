@@ -1,10 +1,10 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Middleware;
+namespace Forgeify\BillingPortal\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\RedirectResponse;
-use RenokiCo\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\BillingPortal;
 
 class Authorize
 {

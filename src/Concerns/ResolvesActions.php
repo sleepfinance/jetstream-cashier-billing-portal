@@ -1,8 +1,8 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Concerns;
+namespace Forgeify\BillingPortal\Concerns;
 
-use RenokiCo\BillingPortal\Contracts\HandleSubscriptions;
+use Forgeify\BillingPortal\Contracts\HandleSubscriptions;
 
 trait ResolvesActions
 {

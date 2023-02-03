@@ -1,13 +1,13 @@
 <?php
 
-namespace RenokiCo\BillingPortal\Http\Livewire;
+namespace Forgeify\BillingPortal\Http\Livewire;
 
 use Illuminate\Http\Request;
 use Laravel\Jetstream\InteractsWithBanner;
 use Livewire\Component;
-use RenokiCo\BillingPortal\BillingPortal;
-use RenokiCo\BillingPortal\Contracts\HandleSubscriptions;
-use RenokiCo\CashierRegister\Saas;
+use Forgeify\BillingPortal\BillingPortal;
+use Forgeify\BillingPortal\Contracts\HandleSubscriptions;
+use Forgeify\CashierRegister\Saas;
 
 class PlansSlide extends Component
 {
@@ -51,7 +51,7 @@ class PlansSlide extends Component
     /**
      * Swap the plan to a new one.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @param  string  $newPlanId
      * @return \Illuminate\Http\Response|void
@@ -98,7 +98,7 @@ class PlansSlide extends Component
     /**
      * Cancel the current active subscription.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @return void
      */
@@ -120,7 +120,7 @@ class PlansSlide extends Component
     /**
      * Resume the current cancelled subscription.
      *
-     * @param  \RenokiCo\BillingPortal\Contracts\HandleSubscriptions  $manager
+     * @param  \Forgeify\BillingPortal\Contracts\HandleSubscriptions  $manager
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response|void
      */

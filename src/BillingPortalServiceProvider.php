@@ -1,11 +1,11 @@
 <?php
 
-namespace RenokiCo\BillingPortal;
+namespace Forgeify\BillingPortal;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use RenokiCo\BillingPortal\Http\Livewire\ListPaymentMethods;
-use RenokiCo\BillingPortal\Http\Livewire\PlansSlide;
+use Forgeify\BillingPortal\Http\Livewire\ListPaymentMethods;
+use Forgeify\BillingPortal\Http\Livewire\PlansSlide;
 
 class BillingPortalServiceProvider extends ServiceProvider
 {
